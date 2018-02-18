@@ -1,11 +1,16 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Framework\Console\CommandList">
-        <preference for="Borisperevyazko\Brewery\Api\RequestInterface" type="Borisperevyazko\Brewery\Model\Request" />
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="borisperevyazko_import_breweries" xsi:type="object">Borisperevyazko\Brewery\Console\Command\ImportBreweriesCommand</item>
             </argument>
         </arguments>
     </type>
+    <preference for="Borisperevyazko\Brewery\Api\RequestInterface" type="Borisperevyazko\Brewery\Model\Request" />
+    <preference for="Borisperevyazko\Brewery\Api\ResponseInterface" type="Borisperevyazko\Brewery\Model\Response" />
+    <preference for="Borisperevyazko\Brewery\Api\RequestManagerInterface" type="Borisperevyazko\Brewery\Model\RequestManager" />
+    <preference for="Borisperevyazko\Brewery\Api\ImportProductManagerInterface" type="Borisperevyazko\Brewery\Model\ImportProductManager" />
+    <preference for="Borisperevyazko\Brewery\Api\ConfigInterface" type="Borisperevyazko\Brewery\Model\Config" />
+    <preference for="Borisperevyazko\Brewery\Api\ProductMapperInterface" type="Borisperevyazko\Brewery\Model\ProductMapper" />
 </config>
