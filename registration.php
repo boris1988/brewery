@@ -3,4 +3,4 @@
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
     'Borisperevyazko_Brewery',
     __DIR__
-
+);
