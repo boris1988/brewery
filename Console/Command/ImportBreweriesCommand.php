@@ -2,6 +2,8 @@
 
 namespace Borisperevyazko\Brewery\Console\Command;
 
+use Borisperevyazko\Brewery\Api\RequestInterface;
+
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -16,6 +18,17 @@ class ImportBreweriesCommand extends Command
 {
     const COMMAND_NAME = "brewery:import:products";
     const COMMAND_DESCRIPTION = "Import brewery items from brewerydb.com";
+
+
+    protected $request;
+
+    public function __construct(
+        RequestInterface $request
+    )
+    {
+        $this->request = $request;
+        parent::__construct();
+    }
 
     protected function configure()
     {

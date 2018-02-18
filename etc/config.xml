@@ -2,10 +2,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <borisperevyazko_brewery>
-            <general>
-                <enable>1</enable>
-            </general>
-        </borisperevyazko_brewery>
+        <borisperevyazko>
+            <brewery>
+                <api_key>dc63b7ab230f996ad8f0f86553d8126d</api_key>
+                <base_url>http://api.brewerydb.com/v2/</base_url>
+            </brewery>
+        </borisperevyazko>
     </default>
 </config>
